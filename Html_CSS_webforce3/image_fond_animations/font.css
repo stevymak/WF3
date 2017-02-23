@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'skyfall_doneregular';
+    src: url('police/skyfall_done-webfont.woff2') format('woff2'),
+         url('police/skyfall_done-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'skyfall_doneregular';
+    background: #000000 url("fond3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.contenu{
+    width: 800px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3); /*mieux que opacity (car
+        cela n'attenue pas la couleur du texte)*/
+    margin: 200px auto 0 auto;
+}
+
+.contenu p{/*cela permet de centrer du texte vertricalement et
+    horizontalement*/
+    text-align: center;
+    position: relative;
+    top: 40%;
+}

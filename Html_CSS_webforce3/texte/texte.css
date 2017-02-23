@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'skyfall_doneregular';
+    src: url('police/skyfall_done-webfont.woff2') format('woff2'),
+         url('police/skyfall_done-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cityscape_fontcityscape_font';
+    src: url('police/cityscape_font-webfont.woff2') format('woff2'),
+         url('police/cityscape_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    font-family: 'skyfall_doneregular';
+    }
+
+h1, h2{
+    font-family: 'cityscape_fontcityscape_font';
+}
