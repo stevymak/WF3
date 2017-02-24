@@ -1,0 +1,42 @@
+#conteneur{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.A{
+    background-color: #456;
+    height: 250px;
+    width: 250px;
+    float: left;
+}
+.B{
+    background-color: #88e;
+    height: 250px;
+    width: 500px;
+    float: left;
+}
+.C{
+    background-color: cyan;
+    height: 250px;
+    width:1000px;
+}
+.clear{
+    clear: both;
+}
+header{
+    background-color: red;
+    height:100px;
+}
+nav{
+    background-color: blue;
+    height: 25px;
+}
+.milieu{
+    background-color: yellow;
+    height: 500px;
+    margin: 2%;
+}
+footer{
+    background-color: #654;
+    height: 100px;
+}
