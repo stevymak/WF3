@@ -1,0 +1,15 @@
+html,body,div,span,h1,h2,p,menu,nav,footer,header{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+
+}
+
+/*
+Plusieurs éléments (dans cet exemple : h1, p) hérite de marges et autres
+qu'on ne souhaite pas toujours conserver
+
+en faisant un reset, on ne nous impose rien;ensuite, rien ne nous
+empeche de définir notre propre style et d'etre maitre de nos choix.
+*/

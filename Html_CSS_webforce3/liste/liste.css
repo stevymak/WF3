@@ -1,0 +1,14 @@
+ul.fruit{
+    list-style-type: none;
+}
+
+ul.fruit li{
+    float: left;
+    margin: 15px;
+    background: url(photo1.png) no-repeat;
+    padding: 0 0 0 17px;
+}
+
+hr{
+    clear: both;
+}

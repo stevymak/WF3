@@ -1,0 +1,11 @@
+#premierecase,#deuxiemecase,#troisiemecase,#quatriemecase{
+    width: 205px;
+    float: left;
+}
+.clear1{
+    clear:both;
+}
+.container{
+    width: 502px;
+    height: 542px;
+}

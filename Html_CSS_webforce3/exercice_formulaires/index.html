@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaires</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <form class="">
+    <fieldset id="premierecase">
+        <legend>Informations</legend>
+        <label for="nom">Nom</label><br/>
+        <input type="text" name="nom" required=""/><br/>
+        <label for="prenom">Prenom</label><br/>
+        <input type="text" name="prenom" required=""/><br/>
+        <label for="telephone">Telephone</label><br/>
+        <input type="tel" name="telephone" pattern="[0-9]{10}" maxlength="8"><br/>
+        <label for="ville">Ville</label><br/>
+        <input type="text" name="ville" list="france"><br/>
+        <datalist id="france"><br/>
+            <option>Paris</option>
+            <option>Saint Denis</option>
+            <option>Poissy</option>
+            <option>Melun</option>
+            <option>Cergy</option>
+        </datalist>
+        <label for="cp">Code Postal</label><br/>
+        <input type="text" name="cp" maxlength="5" pattern="[0-9]{5}"><br/>
+        <label for="adresse">Adresse</label><br/>
+        <textarea name="adresse" rows="5" cols="25"></textarea><br/>
+    </fieldset>
+
+    <fieldset id="deuxiemecase">
+        <legend>Date de Naissance</legend>
+        <label for="datedenaissance">Jour</label>
+        <select class="champ" name="Jour">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select><br/>
+        <br/>
+
+        <label for="datedenaissance">Mois</label>
+        <select class="champ" name="mois" title="mois">
+        <option>Janvier</option>
+        <option>Fevrier</option>
+        <option>Mars</option>
+        <option>Avril</option>
+        <option>Mai</option>
+        <option>Juin</option>
+        <option>Juillet</option>
+        <option>Aout</option>
+        <option>Septembre</option>
+        <option>Octobre</option>
+        <option>Novembre</option>
+        <option>Decembre</option>
+    </select><br/>
+        <br/>
+        
+        <label for="datedenaissance">Annee</label>
+        <select class="champ" name="annee" title="annee">
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+        <option>2029</option>
+        <option>2030</option>
+        <option>2031</option>
+        <option>2032</option>
+        <option>2033</option>
+    </select><br/>
+        <br/>
+    </fieldset>
+
+    <fieldset id="troisiemecase">
+        <legend>Civilité</legend>
+        <label for="Homme">Homme :</label><input type="radio" name="homme">
+        <label for="Femme">Femme :</label><input type="radio" name="femme">
+    </fieldset>
+
+
+
+    <fieldset id="quatriemecase">
+        <legend>Informations Facultatives</legend>
+        <label for="description">Description</label><br/>
+        <textarea name="description" rows="4" cols="30"></textarea><br/>
+    </fieldset>
+</form>
+    </div>
+    </body>
+</html>

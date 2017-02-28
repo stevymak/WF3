@@ -1,0 +1,32 @@
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+    background: url(videoBackground.jpg) no-repeat;
+    background-size: cover;
+}
+
+div{
+    font-family: arial;
+    background: rgba(255,255,255,0.3);
+    width: 500px;
+    min-height: 300px;
+    float: right;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+/*video : background cela permet d'eviter un fond noir lors de la première
+lecture se termine et que la 2ème redémarre avec le loop
+video:cover cela permet au background de couvrir tout l'écran
+video : position fixed - maintien la video fixée meme si l'on descend dans
+la page avec l'ascenseur (scroll)
+video: min-width -- largeur minimum
+video: min-height -- hauteur minimum
+video: z-index : permet de définir une valeur qui détermine la position de
+l'élément au niveau de la superposition(premier plan, second plan)
+*/
