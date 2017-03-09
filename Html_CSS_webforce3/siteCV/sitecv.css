@@ -57,6 +57,7 @@ section{
 }
 #fiche{
     float:left;
+    margin: 10px 0 0 45px;
 }
 .paragraphe1{
     margin-left: 55px;
@@ -92,8 +93,7 @@ margin: 12px 0 0 120px;
     width: 250px;
     border-radius: 10px 10px 10px 10px;
     border: 2px solid black;
-    margin-top: 15px;
-    margin-right: 10px;
+    margin: 15px 10px 350px 0;
     float: right;
     }
     .case{
