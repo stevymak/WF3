@@ -261,12 +261,11 @@ export default function DBSCGArena() {
     allIds.forEach((id, i) => { ext[id] = codes[i % codes.length]; });
     persistImgs({ ...imgCfg, ext });
   };
-  useEffect(() => { (async () => {
-    try { const r = await window.storage.get("dbscg-imgcfg"); if (r) setImgCfg(JSON.parse(r.value)); } catch (e) {}
-    try { const r = await window.storage.get("dbscg-decks"); if (r) setCustomDecks(JSON.parse(r.value)); } catch (e) {}
-  })(); }, []);
-  const persistImgs = async (next) => { setImgCfg(next); try { await window.storage.set("dbscg-imgcfg", JSON.stringify(next)); setSaveMsg("✓ Enregistré"); } catch (e) { setSaveMsg("⚠ Échec"); } setTimeout(() => setSaveMsg(""), 2000); };
-  const persistDecks = async (next) => { setCustomDecks(next); try { await window.storage.set("dbscg-decks", JSON.stringify(next)); } catch (e) {} };
+  // État en MÉMOIRE de session uniquement : pas de localStorage/sessionStorage
+  // (interdits/instables en artifact). Decks et mapping d'images vivent le temps
+  // de la session ; ils sont perdus au rechargement — assumé et signalé dans l'UI.
+  const persistImgs = (next) => { setImgCfg(next); setSaveMsg("✓ Appliqué (session)"); setTimeout(() => setSaveMsg(""), 2000); };
+  const persistDecks = (next) => setCustomDecks(next);
   const mut = (fn) => setG((prev) => { if (!prev || prev.winner) return prev; const s = clone(prev); fn(s); return s; });
   /* IA : tour normal */
   useEffect(() => {
@@ -424,10 +423,10 @@ export default function DBSCGArena() {
           <input type="file" multiple accept=".webp,.png,.jpg,.jpeg,.json" className="inp" onChange={handleAssets} />
           <div className="psub">{codes.length ? `✓ ${codes.length} images chargées${localMeta ? " · cards.json OK" : ""}` : "Sélectionne le contenu de dbscg_assets/ (cards/ + cards.json)."}</div>
           {codes.length > 0 && <button className="btn on" onClick={autoMap}>🔀 Auto-mapper les cartes du jeu</button>}
-          <div className="psub">ℹ️ Import valable pour la session. Le mapping des codes est, lui, sauvegardé.</div>
+          <div className="psub">ℹ️ Tout (images, mapping, URL) reste valable pour la session en cours — pas de sauvegarde entre deux ouvertures.</div>
         </div>
         <div className="grp box">
-          <div className="glbl">B · MODÈLE D'URL — persistant</div>
+          <div className="glbl">B · MODÈLE D'URL — session</div>
           <div className="psub"><code>cd dbscg_assets &amp;&amp; python -m http.server 8000</code></div>
           <input className="inp" value={imgCfg.template} onChange={(e) => setImgCfg({ ...imgCfg, template: e.target.value })} placeholder="http://localhost:8000/cards/{id}.webp" />
         </div>
